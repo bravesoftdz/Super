@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="About.pas"/>
+    <File Path="About.dfm"/>
+    <File Path="ChgPattern.pas"/>
+    <File Path="ChgPattern.dfm"/>
+    <File Path="Columns.pas"/>
+    <File Path="Columns.dfm"/>
+    <File Path="config.pas"/>
+    <File Path="config.dfm"/>
+    <File Path="copyunder.pas"/>
+    <File Path="copyunder.dfm"/>
+    <File Path="DataMod.pas"/>
+    <File Path="DataMod.dfm"/>
+    <File Path="Divpas.pas"/>
+    <File Path="Divpas.dfm"/>
+    <File Path="Global.pas"/>
+    <File Path="main.pas"/>
+    <File Path="main.dfm"/>
+    <File Path="Matches.pas"/>
+    <File Path="Matches.dfm"/>
+    <File Path="Monitor.pas"/>
+    <File Path="Monitor.dfm"/>
+    <File Path="Mul.pas"/>
+    <File Path="Mul.dfm"/>
+    <File Path="MultiRep.pas"/>
+    <File Path="MultiRep.dfm"/>
+    <File Path="Patterns.pas"/>
+    <File Path="Patterns.dfm"/>
+    <File Path="qrMatch.pas"/>
+    <File Path="qrMatch.dfm"/>
+    <File Path="RepNumbers.pas"/>
+    <File Path="RepNumbers.dfm"/>
+    <File Path="SearchRpl.pas"/>
+    <File Path="SearchRpl.dfm"/>
+    <File Path="Sum.pas"/>
+    <File Path="Sum.dfm"/>
+    <File Path="SumCol.pas"/>
+    <File Path="SumCol.dfm"/>
+    <File Path="SumReduc.pas"/>
+    <File Path="SumReduc.dfm"/>
+    <File Path="SuperType.pas"/>
+  </ProjectSortOrder>
+</BorlandProject>
