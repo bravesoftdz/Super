@@ -68,6 +68,7 @@ type
     qBTOGRB: TIntegerField;
     qBTOGRE: TIntegerField;
     qBTODDEVEN: TStringField;
+    TimerCount: TTimer;
     procedure FormKeyDown(Sender: TObject; var Key: Word;
       Shift: TShiftState);
     procedure FormDestroy(Sender: TObject);
@@ -87,6 +88,8 @@ type
     procedure bTestAndModifyClick(Sender: TObject);
     procedure qBTBeforeOpen(DataSet: TDataSet);
     procedure FormShow(Sender: TObject);
+    procedure TimerCountTimer(Sender: TObject);
+    procedure qBTAfterDelete(DataSet: TDataSet);
   private
     procedure ShowResultOnScreen;
     procedure ShowDevelopmentInfo;
@@ -168,6 +171,13 @@ begin
       top  := 10;
       visible := true;
    end;
+end;
+
+procedure TfrmSumCol.TimerCountTimer(Sender: TObject);
+begin
+  TimerCount.Enabled := False;
+  qBT.Refresh;
+  lblItemCount.Caption := 'Count : ' + IntToStr(qBT.RecordCount);
 end;
 
 procedure TfrmSumCol.ShowDevelopmentInfo;
@@ -493,6 +503,11 @@ begin
    end;
 end;
 
+procedure TfrmSumCol.qBTAfterDelete(DataSet: TDataSet);
+begin
+  TimerCount.Enabled := True;
+end;
+
 procedure TfrmSumCol.qBTAfterInsert(DataSet: TDataSet);
 begin
    qBTBTID.Value := GenKeyVal('BTID');
@@ -501,7 +516,7 @@ end;
 
 procedure TfrmSumCol.qBTAfterOpen(DataSet: TDataSet);
 begin
-   lblItemCount.Caption := 'Count : ' + inttostr(qBT.recordcount);
+  lblItemCount.Caption := 'Count : ' + inttostr(qBT.recordcount);
 end;
 
 procedure TfrmSumCol.qBTAfterPost(DataSet: TDataSet);
